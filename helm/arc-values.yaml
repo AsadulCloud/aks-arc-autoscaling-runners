@@ -1,0 +1,31 @@
+githubConfigUrl: "https://github.com/AsadulCloud/azure-devops-portfolio"
+
+minRunners: 0
+maxRunners: 10
+runnerScaleSetName: "aks-autoscaler-fleet"
+
+containerMode:
+  type: "dind"
+
+# Listener metrics configuration matching ARC CRD v1alpha1
+listenerMetrics:
+  counters:
+    gha_started_jobs_total:
+      labels: []
+    gha_completed_jobs_total:
+      labels: []
+  gauges:
+    gha_running_jobs:
+      labels: []
+    gha_registered_runners:
+      labels: []
+    gha_busy_runners:
+      labels: []
+    gha_idle_runners:
+      labels: []
+    gha_desired_runners:
+      labels: []
+    gha_max_runners:
+      labels: []
+    gha_min_runners:
+      labels: []

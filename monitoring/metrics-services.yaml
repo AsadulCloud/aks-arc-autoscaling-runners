@@ -1,0 +1,29 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: arc-metrics
+  namespace: arc-systems
+  labels:
+    app.kubernetes.io/name: gha-rs-controller
+spec:
+  selector:
+    app.kubernetes.io/name: gha-rs-controller
+  ports:
+    - name: metrics
+      port: 8080
+      targetPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: arc-listener-metrics
+  namespace: arc-systems
+  labels:
+    app.kubernetes.io/name: aks-autoscaler-fleet
+spec:
+  selector:
+    app.kubernetes.io/name: aks-autoscaler-fleet
+  ports:
+    - name: metrics
+      port: 8080
+      targetPort: 8080

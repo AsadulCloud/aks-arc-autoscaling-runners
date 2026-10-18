@@ -1,0 +1,23 @@
+name: Test ARC Multi-Pod Autoscaling
+
+on:
+  workflow_dispatch:
+
+jobs:
+  parallel-stress-test:
+    runs-on: aks-autoscaler-fleet
+    strategy:
+      fail-fast: false
+      matrix:
+        worker: [1, 2, 3, 4, 5, 6, 7, 8]
+    steps:
+      - name: Report Runner Instance
+        run: |
+          echo "Starting Worker ${{ matrix.worker }} on AKS!"
+          hostname
+          uname -a
+
+      - name: Simulate Build Workload
+        run: |
+          echo "Worker ${{ matrix.worker }} holding runner active for 45 seconds..."
+          sleep 45
