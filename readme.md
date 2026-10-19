@@ -56,7 +56,7 @@ This project runs ARC on AKS so that runners behave like short-lived, disposable
 
 ## Architecture
 
-![Architecture diagram](docs/assets/architecture.png)
+![Architecture diagram](docs/assets/architecture.svg)
 
 ```text
            +-----------------------------+
