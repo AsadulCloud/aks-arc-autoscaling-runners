@@ -1,4 +1,4 @@
-githubConfigUrl: "https://github.com/AsadulCloud/azure-devops-portfolio"
+githubConfigUrl: "https://github.com/AsadulCloud/aks-arc-autoscaling-runners"
 
 minRunners: 0
 maxRunners: 10

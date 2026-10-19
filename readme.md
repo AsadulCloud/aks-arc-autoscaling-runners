@@ -161,7 +161,7 @@ terraform init
 terraform plan -out=aks_runner.plan
 terraform apply aks_runner.plan
 
-az aks get-credentials --resource-group rg-arc-runners --name arc-runner-cluster
+az aks get-credentials --resource-group demo-rg --name arc-runner-cluster
 ```
 
 ### 2. Install the ARC controller
@@ -174,7 +174,9 @@ helm install arc \
   oci://ghcr.io/actions/actions-runner-controller-charts/gha-runner-scale-set-controller \
   --namespace arc-systems \
   --create-namespace \
-  --set metrics.controllerManagerAddr=":8080"
+  --set metrics.controllerManagerAddr=":8080" \
+  --set metrics.listenerAddr=":8080" \
+  --set metrics.listenerEndpoint="/metrics"
 ```
 
 ### 3. Install the runner scale set
