@@ -1,0 +1,20 @@
+
+# Terraform cache and provider plugins
+**/.terraform/
+.terraform/
+.terraform.lock.hcl
+
+# State files and plans
+*.tfstate
+*.tfstate.*
+*.tfplan
+*.plan
+
+# Secrets
+*.tfvars
+!terraform.tfvars.example
+*.pem
+
+# OS/IDE files
+.DS_Store
+Thumbs.db
