@@ -8,7 +8,7 @@
 
 A reference implementation of self-hosted GitHub Actions runners on Azure Kubernetes Service (AKS), using Actions Runner Controller (ARC). Runners are created on demand, run one job each, and scale back to zero when idle.
 
-**Result:** In a load test, the fleet scaled from 0 to 8 ephemeral runner pods, completed all jobs, and returned to 0 within about 90 seconds.
+**Result:** In a load test, the fleet scaled from 0 to N ephemeral runner pods, completed all jobs, and returned to 0 within about 90 seconds.
 
 ---
 
